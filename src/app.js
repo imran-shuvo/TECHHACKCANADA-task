@@ -1,20 +1,39 @@
 import React from 'react'
 import Header from "./components/header"
 import Footer from './components/footer'
-import Content from './components/content'
+
 import Movie from './components/movie'
+import Home from './components/home'
+import Series  from './components/series'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 const App = ()=>{
 
     return(
-        <div>
-            <Header />
-            
-            <Movie />
+        <BrowserRouter>
 
-            <Footer />
+            <div>
+                <Header />
+                
+                    {/* <Home /> */}
 
-        </div>
+                <Footer />
+
+            </div>
+
+            <Switch>
+                <Route exact path="/series/">
+                    <Series/> 
+                </Route>
+
+                <Route exact path="/movies/">
+                    <Movie/> 
+                </Route>
+                <Route exact path={["/","/Home/"]}>
+                    <Home/> 
+                </Route>
+            </Switch>
+        </BrowserRouter>
         
       
     )

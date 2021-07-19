@@ -32,14 +32,15 @@ const Content=(props)=>{
             const url = seriesArray[i].images["Poster Art"].url;
             
             arr.push(
-                <div className="row">
-                    <div className="column">
-                        <img src={url} alt="Nature" style={{width:"100%",float:"left"}} />
+                
+                
+                    <div className="column"  >
+                        <img className="ui small rounded image" src={url} alt="Nature" />
                         <p style={{fontSize:"20px",color:"purple",fontFamily:"arial"}}>{seriesArray[i].title}</p>
                     </div>
 
  
-                 </div>
+                 
             
 
         
@@ -56,11 +57,12 @@ const Content=(props)=>{
 
 
     return(
-		<div >    
+		<div className="container" >  
+        <div className="row">  
             
             {getData}
             
-
+        </div>
            
   		</div>
 

@@ -34,8 +34,8 @@ const Content=(props)=>{
             arr.push(
                 <div className="row">
                     <div className="column">
-                        <img src={url} alt="Nature" style={{width:"100%",float:"right"}} />
-                        <li>{seriesArray[i].title}</li>
+                        <img src={url} alt="Nature" style={{width:"100%",float:"left"}} />
+                        <p style={{fontSize:"20px",color:"purple",fontFamily:"arial"}}>{seriesArray[i].title}</p>
                     </div>
 
  
